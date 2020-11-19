@@ -1,0 +1,238 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: white;
+    opacity: 0;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+}
+
+
+/*
+=================================================================
+NAVIGATION
+=================================================================
+*/
+#home {
+    pointer-events: all;
+    transition: 0.5s ease-in-out;
+}
+
+#home:hover {
+    fill: deepskyblue !important;
+
+}
+
+nav {
+    height: 55px;
+    background-color: #F1F6F9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999;
+    position: sticky;
+}
+
+nav .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 55px;
+    background-color: #14274E;
+}
+
+nav img {
+    height: 35px;
+    width: 35px;
+    color: #0c5460;
+}
+
+.userInfo {
+    background-color: #394867;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logout {
+    pointer-events: all;
+    transition: 0.5s ease-in-out;
+    fill: red;
+}
+
+.logout:hover {
+    fill: deepskyblue !important;
+
+}
+
+.userInfo #profileImage {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.userInfo span {
+    color: #F1F6F9;
+}
+
+.userInfo #name {
+    margin-left: 15px;
+    margin-right: 8px;
+    display: table-cell;
+}
+
+
+/*
+=================================================================
+ INDEX PAGE
+=================================================================
+*/
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.main .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10px;
+    background-color: #F1F6F9;
+    width: 360px;
+    height: 320px;
+}
+
+
+.main .box .role {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xx-large;
+    position: relative;
+    bottom: 95px;
+    color: #14274E;
+    font-weight: bold;
+}
+
+.box .bottom {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 100%;
+    background-color: #14274E;
+}
+
+.box .bottom .total {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: xx-large;
+}
+
+/*
+=================================================================
+ STUDENT PAGE
+=================================================================
+*/
+
+
+/*
+=================================================================
+ LOGIN PAGE
+=================================================================
+*/
+
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .loginBox {
+    width: 350px;
+    height: 350px;
+    background-color: #f8f9fa;
+}
+
+.login .loginBox .loginDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #F1F6F9;
+}
+
+h4 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+#submit {
+    width: 100px;
+}
+
+.loginUsername {
+    margin-bottom: 10px;
+}
+
+
+#submit {
+    width: 221px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.loginPassword label, .loginUsername label {
+    margin-bottom: 0px;
+}
+
+/*
+=================================================================
+ DATABLES
+=================================================================
+*/
+
+#myTable_filter label input[type=search] {
+    border: 1px solid #14274e !important;
+}
+
+#myTable_filter label input[type=search]::placeholder {
+    color: #2b2b2b;
+    opacity: 1;
+}
+
+#myTable_length label select {
+    border: 1px solid #14274e !important;
+    color: #14274e
+}
+
+#myTable_length label select::before {
+    color: #14274e;
+}
+
+#myTable_length label select::after {
+    color: #14274e;
+}
+
+#myTable_length label {
+    color: #14274e;
+}
+
+tableT {
+    margin-top: 200px !important;
+}
