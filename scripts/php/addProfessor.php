@@ -16,18 +16,18 @@ if (isset($_POST['submit'])) {
         header("Location: '../../login.php?error=invalidemail'");
         exit();
     } else {
-        if (emailExistsProfessor($conn, $email,"profesori.php")) {
-            header('Location: ../../admin/profesori.php?error=duplicateemail');
+        if (emailExistsProfessor($conn, $email, "professors.php")) {
+            header('Location: ../../admin/professors.php?error=duplicateemail');
             exit();
         } else {
-            if (emptyAddProfessor($ime,$prezime,$adresa,$telefon,$email,$password,$titula)) {
-                header('Location: ../../admin/profesori.php?add=emptyinput');
+            if (emptyAddProfessor($ime, $prezime, $adresa, $telefon, $email, $password, $titula)) {
+                header('Location: ../../admin/professors.php?add=emptyinput');
             } else {
-                addProfessor($ime,$prezime,$adresa,$telefon,$email,$password,$titula, $conn);
+                addProfessor($ime, $prezime, $adresa, $telefon, $email, $password, $titula, $conn);
             }
         }
     }
 } else {
-    header('Location: ../../admin/profesori.php?add=failure');
+    header('Location: ../../admin/professors.php?add=failure');
     exit();
 }

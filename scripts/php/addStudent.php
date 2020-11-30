@@ -21,12 +21,12 @@ if (isset($_POST['submit'])) {
         header("Location: '../../login.php?error=invalidemail'");
         exit();
     } else {
-        if (emailExistsStudent($conn, $email,"studenti.php")) {
-            header('Location: ../../admin/studenti.php?error=duplicateemail');
+        if (emailExistsStudent($conn, $email, "students.php")) {
+            header('Location: ../../admin/students.php?error=duplicateemail');
             exit();
         } else {
             if (emptyAddStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa)) {
-                header('Location: ../../admin/studenti.php?add=emptyinput');
+                header('Location: ../../admin/students.php?add=emptyinput');
             } else {
                 addStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa, $conn);
             }
@@ -35,6 +35,6 @@ if (isset($_POST['submit'])) {
 
 
 } else {
-    header('Location: ../../admin/studenti.php?error=nosubmit');
+    header('Location: ../../admin/students.php?error=nosubmit');
     exit();
 }

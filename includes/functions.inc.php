@@ -15,51 +15,51 @@ function addStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $e
 {
 
     if (!$conn) {
-        header("Location: ../../admin/studenti.php?error=connectionfailed?" . $conn->error);
+        header("Location: ../../admin/students.php?error=connectionfailed?" . $conn->error);
         exit();
     } else {
         $conn->query("INSERT INTO studenti (ime,prezime,ime_roditelja,adresa,telefon,jmbg,email,password,
 fakultet,odsjek,broj_indeksa) VALUES ('$ime','$prezime','$ime_roditelja','$adresa','$telefon','$jmbg','$email','$password','$fakultet','$odsjek','$broj_indeksa');");
-        header("Location: ../../admin/studenti.php?success=studentadded");
+        header("Location: ../../admin/students.php?success=studentadded");
         exit();
     }
 }
 
-function addProfessor($ime,$prezime,$adresa,$telefon,$email,$password,$titula, $conn)
+function addProfessor($ime, $prezime, $adresa, $telefon, $email, $password, $titula, $conn)
 {
 
     if (!$conn) {
-        header("Location: ../../admin/profesori.php?error=connectionfailed?" . $conn->error);
+        header("Location: ../../admin/professors.php?error=connectionfailed?" . $conn->error);
         exit();
     } else {
         $conn->query("INSERT INTO profesori (ime,prezime,adresa,telefon,email,password,titula) VALUES ('$ime','$prezime','$adresa','$telefon','$email','$password','$titula');");
-        header("Location: ../../admin/profesori.php?success=professoradded");
+        header("Location: ../../admin/professors.php?success=professoradded");
         exit();
     }
 }
 
-function addAssistant($ime,$prezime,$adresa,$telefon,$email,$password,$titula, $conn)
+function addAssistant($ime, $prezime, $adresa, $telefon, $email, $password, $titula, $conn)
 {
 
     if (!$conn) {
-        header("Location: ../../admin/asistenti.php?error=connectionfailed?" . $conn->error);
+        header("Location: ../../admin/assistants.php?error=connectionfailed?" . $conn->error);
         exit();
     } else {
         $conn->query("INSERT INTO asistenti (ime,prezime,adresa,telefon,email,password,titula) VALUES ('$ime','$prezime','$adresa','$telefon','$email','$password','$titula');");
-        header("Location: ../../admin/asistenti.php?success=assistantadded");
+        header("Location: ../../admin/assistants.php?success=assistantadded");
         exit();
     }
 }
 
-function addStaff($ime,$prezime,$adresa,$telefon,$email,$password,$titula, $conn)
+function addStaff($ime, $prezime, $adresa, $telefon, $email, $password, $titula, $conn)
 {
 
     if (!$conn) {
-        header("Location: ../../admin/pomocnoOsoblje.php?error=connectionfailed?" . $conn->error);
+        header("Location: ../../admin/staff.php?error=connectionfailed?" . $conn->error);
         exit();
     } else {
         $conn->query("INSERT INTO pomocno_osoblje (ime,prezime,adresa,telefon,email,password,titula) VALUES ('$ime','$prezime','$adresa','$telefon','$email','$password','$titula');");
-        header("Location: ../../admin/pomocnoOsoblje.php?success=staffadded");
+        header("Location: ../../admin/staff.php?success=staffadded");
         exit();
     }
 }
@@ -76,7 +76,7 @@ function emptyAddStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmb
     return $result;
 }
 
-function emptyAddProfessor($ime,$prezime,$adresa,$telefon,$email,$password,$titula)
+function emptyAddProfessor($ime, $prezime, $adresa, $telefon, $email, $password, $titula)
 {
     $result;
     if (empty($ime) || empty($prezime) || empty($adresa) || empty($telefon) || empty($email) || empty($password) || empty($titula)) {
@@ -87,7 +87,7 @@ function emptyAddProfessor($ime,$prezime,$adresa,$telefon,$email,$password,$titu
     return $result;
 }
 
-function emptyAddAssistant($ime,$prezime,$adresa,$telefon,$email,$password,$titula)
+function emptyAddAssistant($ime, $prezime, $adresa, $telefon, $email, $password, $titula)
 {
     $result;
     if (empty($ime) || empty($prezime) || empty($adresa) || empty($telefon) || empty($email) || empty($password) || empty($titula)) {
@@ -98,7 +98,7 @@ function emptyAddAssistant($ime,$prezime,$adresa,$telefon,$email,$password,$titu
     return $result;
 }
 
-function emptyAddStaff($ime,$prezime,$adresa,$telefon,$email,$password,$titula)
+function emptyAddStaff($ime, $prezime, $adresa, $telefon, $email, $password, $titula)
 {
     $result;
     if (empty($ime) || empty($prezime) || empty($adresa) || empty($telefon) || empty($email) || empty($password) || empty($titula)) {
@@ -110,8 +110,7 @@ function emptyAddStaff($ime,$prezime,$adresa,$telefon,$email,$password,$titula)
 }
 
 
-
-function emailExistsStudent($conn, $email,$location)
+function emailExistsStudent($conn, $email, $location)
 {
     if (!$conn) {
         header("Location: ../../admin/" . $location . "?error=queryfailed?" . $conn->error);
@@ -128,7 +127,7 @@ function emailExistsStudent($conn, $email,$location)
     }
 }
 
-function emailExistsProfessor($conn, $email,$location)
+function emailExistsProfessor($conn, $email, $location)
 {
     if (!$conn) {
         header("Location: ../../admin/" . $location . "?error=queryfailed?" . $conn->error);
@@ -145,7 +144,7 @@ function emailExistsProfessor($conn, $email,$location)
     }
 }
 
-function emailExistsAssistant($conn, $email,$location)
+function emailExistsAssistant($conn, $email, $location)
 {
     if (!$conn) {
         header("Location: ../../admin/" . $location . "?error=queryfailed?" . $conn->error);
@@ -162,7 +161,7 @@ function emailExistsAssistant($conn, $email,$location)
     }
 }
 
-function emailExistsStaff($conn, $email,$location)
+function emailExistsStaff($conn, $email, $location)
 {
     if (!$conn) {
         header("Location: ../../admin/" . $location . "?error=queryfailed?" . $conn->error);
@@ -190,7 +189,8 @@ function emptyInputLogin($username, $password)
     return $result;
 }
 
-function adminExists($conn, $username, $password) {
+function adminExists($conn, $username, $password)
+{
     if (!$conn) {
         header("Location: ../login.php?error=queryfailed?" . $conn->error);
         exit();
@@ -208,8 +208,8 @@ function adminExists($conn, $username, $password) {
 
 function loginAdmin($conn, $username, $password)
 {
-    $adminExists = adminExists($conn,$username, $password);
-    if(!$adminExists) {
+    $adminExists = adminExists($conn, $username, $password);
+    if (!$adminExists) {
         header("Location: ../login.php");
         exit();
     } else {

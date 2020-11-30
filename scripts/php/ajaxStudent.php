@@ -35,7 +35,7 @@ WHERE userid = '$id';");
         exit($data2);
     }
 
-    if ($_POST['key'] == 'delete' && $_POST['role'] == 'student') {
+    if ($_POST['key'] == 'delete') {
 
         $id = $conn->real_escape_string($_POST['rowId']);
         $conn->query("DELETE FROM studenti WHERE userid = '$id'");

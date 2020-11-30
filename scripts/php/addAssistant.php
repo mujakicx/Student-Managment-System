@@ -16,18 +16,18 @@ if (isset($_POST['submit'])) {
         header("Location: '../../login.php?error=invalidemail'");
         exit();
     } else {
-        if (emailExistsAssistant($conn, $email,"asistenti.php")) {
-            header('Location: ../../admin/asistenti.php?error=duplicateemail');
+        if (emailExistsAssistant($conn, $email, "assistants.php")) {
+            header('Location: ../../admin/assistants.php?error=duplicateemail');
             exit();
         } else {
-            if (emptyAddAssistant($ime,$prezime,$adresa,$telefon,$email,$password,$titula)) {
-                header('Location: ../../admin/asistenti.php?add=emptyinput');
+            if (emptyAddAssistant($ime, $prezime, $adresa, $telefon, $email, $password, $titula)) {
+                header('Location: ../../admin/assistants.php?add=emptyinput');
             } else {
-                addAssistant($ime,$prezime,$adresa,$telefon,$email,$password,$titula, $conn);
+                addAssistant($ime, $prezime, $adresa, $telefon, $email, $password, $titula, $conn);
             }
         }
     }
 } else {
-    header('Location: ../../admin/asistenti.php?add=failure');
+    header('Location: ../../admin/assistants.php?add=failure');
     exit();
 }

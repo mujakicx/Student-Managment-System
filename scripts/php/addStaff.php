@@ -16,18 +16,18 @@ if (isset($_POST['submit'])) {
         header("Location: '../../login.php?error=invalidemail'");
         exit();
     } else {
-        if (emailExistsStaff($conn, $email,"pomocnoOsoblje.php")) {
-            header('Location: ../../admin/pomocnoOsoblje.php?error=duplicateemail');
+        if (emailExistsStaff($conn, $email, "staff.php")) {
+            header('Location: ../../admin/staff.php?error=duplicateemail');
             exit();
         } else {
-            if (emptyAddStaff($ime,$prezime,$adresa,$telefon,$email,$password,$titula)) {
-                header('Location: ../../admin/pomocnoOsoblje.php?add=emptyinput');
+            if (emptyAddStaff($ime, $prezime, $adresa, $telefon, $email, $password, $titula)) {
+                header('Location: ../../admin/staff.php?add=emptyinput');
             } else {
-                addStaff($ime,$prezime,$adresa,$telefon,$email,$password,$titula, $conn);
+                addStaff($ime, $prezime, $adresa, $telefon, $email, $password, $titula, $conn);
             }
         }
     }
 } else {
-    header('Location: ../../admin/pomocnoOsoblje.php?add=failure');
+    header('Location: ../../admin/staff.php?add=failure');
     exit();
 }

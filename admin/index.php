@@ -1,4 +1,5 @@
 <?php require_once '../includes/loginCheck.inc.php' ?>
+<?php include_once '../includes/functions.inc.php' ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,19 +39,18 @@
 
 
 <div class="main">
-    <a href="studenti.php" style="text-decoration:none;">
+    <a href="students.php" style="text-decoration:none;">
         <div class="box"><span class="role">
                 STUDENTI
             </span>
             <div class="bottom"><span class="total">
                     <?php
                     include_once '../includes/numberOfStudents.php';
-                    echo $row;
-                    ?></span>
+                    echo $row; ?></span>
             </div>
         </div>
     </a>
-    <a href="profesori.php" style="text-decoration:none;">
+    <a href="professors.php" style="text-decoration:none;">
         <div class="box"><span class="role">Profesori</span>
             <div class="bottom"><span class="total">
                 <?php
@@ -59,7 +59,7 @@
                 ?></span></div>
         </div>
     </a>
-    <a href="asistenti.php" style="text-decoration:none;">
+    <a href="assistants.php" style="text-decoration:none;">
         <div class="box"><span class="role">Asistenti</span>
             <div class="bottom"><span class="total">
                     <?php
@@ -69,7 +69,7 @@
                 </span></div>
         </div>
     </a>
-    <a href="pomocnoOsoblje.php" style="text-decoration:none;">
+    <a href="staff.php" style="text-decoration:none;">
         <div class="box">
             <span class="role">Pomoćno osoblje</span>
             <div class="bottom"><span class="total">
