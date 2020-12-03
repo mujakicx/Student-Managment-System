@@ -11,7 +11,7 @@ function invalidEmail($email)
     return $result;
 }
 
-function addStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa, $conn)
+function addStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa,$studijskiProgram, $conn)
 {
 
     if (!$conn) {
@@ -19,7 +19,7 @@ function addStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $e
         exit();
     } else {
         $conn->query("INSERT INTO studenti (ime,prezime,ime_roditelja,adresa,telefon,jmbg,email,password,
-fakultet,odsjek,broj_indeksa) VALUES ('$ime','$prezime','$ime_roditelja','$adresa','$telefon','$jmbg','$email','$password','$fakultet','$odsjek','$broj_indeksa');");
+fakultet,odsjek,broj_indeksa,studijskiProgram) VALUES ('$ime','$prezime','$ime_roditelja','$adresa','$telefon','$jmbg','$email','$password','$fakultet','$odsjek','$broj_indeksa','$studijskiProgram');");
         header("Location: ../../admin/students.php?success=studentadded");
         exit();
     }
@@ -65,10 +65,10 @@ function addStaff($ime, $prezime, $adresa, $telefon, $email, $password, $titula,
 }
 
 
-function emptyAddStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa)
+function emptyAddStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa,$studijskiProgram)
 {
     $result;
-    if (empty($ime) || empty($prezime) || empty($ime_roditelja) || empty($adresa) || empty($telefon) || empty($jmbg) || empty($email) || empty($password) || empty($fakultet) || empty($odsjek) || empty($broj_indeksa)) {
+    if (empty($ime) || empty($prezime) || empty($ime_roditelja) || empty($adresa) || empty($telefon) || empty($jmbg) || empty($email) || empty($password) || empty($fakultet) || empty($odsjek) || empty($broj_indeksa) || empty($studijskiProgram)) {
         $result = true;
     } else {
         $result = false;

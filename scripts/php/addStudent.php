@@ -11,6 +11,7 @@ if (isset($_POST['submit'])) {
     $email = $conn->real_escape_string($_POST['email']);
     $password = $conn->real_escape_string($_POST['password']);
     $fakultet = $conn->real_escape_string($_POST['fakultet']);
+    $studijskiProgram = $conn->real_escape_string($_POST['studijskiProgram']);
     $odsjek = $conn->real_escape_string($_POST['odsjek']);
     $broj_indeksa = $conn->real_escape_string($_POST['broj_indeksa']);
 
@@ -25,10 +26,10 @@ if (isset($_POST['submit'])) {
             header('Location: ../../admin/students.php?error=duplicateemail');
             exit();
         } else {
-            if (emptyAddStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa)) {
+            if (emptyAddStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa,$studijskiProgram)) {
                 header('Location: ../../admin/students.php?add=emptyinput');
             } else {
-                addStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa, $conn);
+                addStudent($ime, $prezime, $ime_roditelja, $adresa, $telefon, $jmbg, $email, $password, $fakultet, $odsjek, $broj_indeksa,$studijskiProgram, $conn);
             }
         }
     }

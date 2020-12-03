@@ -14,48 +14,46 @@
                 </button>
             </div>
             <div class="modal-body">
-
-
                 <form method="post" action="../scripts/php/addProfessor.php">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="ime">Ime</label>
-                            <input type="text" class="form-control" required name="ime" id="ime" placeholder="Alek">
+                            <input type="text" class="form-control" required name="ime" id="ime" placeholder="Alek" minlength="3" maxlength="10">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="prezime">Prezime</label>
                             <input type="text" class="form-control" required name="prezime" id="prezime"
-                                   placeholder="Niksic">
+                                   placeholder="Niksic" minlength="3" maxlength="15">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="titula">Titula</label>
                             <input type="text" class="form-control" required id="titula" name="titula"
-                                   placeholder="Doktor">
+                                   placeholder="Doktor" minlength="3" maxlength="20">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="telefon">Telefon</label>
                             <input type="number" class="form-control" required id="telefon" name="telefon"
-                                   placeholder="38761695239">
+                                   placeholder="38761695239" minlength="9" maxlength="13">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="adresa">Adresa</label>
-                        <input type="text" class="form-control" required minlength="7" name="adresa" id="adresa"
+                        <input type="text" class="form-control" required minlength="5" maxlength="30" name="adresa" id="adresa"
                                placeholder="Konatur bb, Travnik, 72270">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" required name="email" id="email" name="email"
+                            <input type="email" class="form-control" required minlength="3" maxlength="30" name="email" id="email" name="email"
                                    placeholder="alek@live.com">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" required name="password" id="password"
+                            <input type="password" class="form-control" required minlength="5" maxlength="100" name="password" id="password"
                                    name="password"
                                    placeholder="******">
                         </div>
