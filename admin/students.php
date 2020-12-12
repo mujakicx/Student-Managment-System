@@ -103,7 +103,7 @@ include_once '../includes/header.inc.php';
                         <div class="form-group col-md-6">
                             <label for="broj_indeksa">Broj indeksa</label>
                             <input type="text" class="form-control" required id="broj_indeksa" name="broj_indeksa"
-                                   placeholder="FIT-10/19">
+                                   placeholder="" readonly>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -287,66 +287,6 @@ include_once '../includes/header.inc.php';
                 include_once '../scripts/php/errorCheck.php';
                 ?>
                 <script src="../scripts/js/loadStudent.js"></script>
-                <script>
-                    $("#fakultetSelect").change(function () {
-                        $("#fakultetHold").remove();
-                        $("#godineSelect").empty();
-                        $("#godineSelect").append( "<option>3+2+3</option>" );
-                        $("#godineSelect").append( "<option>4+1+3</option>" );
-
-                        var selectedFax = $("#fakultetSelect option:selected").text();
-                        if (selectedFax === "Ekonomski fakultet") {
-                            $("#odsjekSelect").empty();
-                            $("#odsjekSelect").append( "<option value='Ekonomija'>Ekonomija</option>" );
-                            $("#odsjekSelect").append( "<option value='Računovodstvo,finansije i revizija'>Računovodstvo,finansije i revizija</option>" );
-                            $("#odsjekSelect").append( "<option value='Finansijska tržišta, instrumenti i institucij'>Finansijska tržišta, instrumenti i institucije</option>" );
-                            $("#odsjekSelect").append( "<option value='Preduzetništvo'>Preduzetništvo</option>" );
-                            $("#odsjekSelect").append( "<option value='Marketing i trgovina'>Marketing i trgovina</option>" );
-                            $("#odsjekSelect").append( "<option value='Bankarstvo i osiguranje'>Bankarstvo i osiguranje</option>" );
-                            $("#odsjekSelect").append( "<option value='Menadžment'>Menadžment</option>" );
-                            $("#odsjekSelect").append( "<option value='Menadžment u obrazovanju'>Menadžment u obrazovanju</option>" );
-                            $("#odsjekSelect").append( "<option value='Menadžment u zdravstvu'>Menadžment u zdravstvu</option>" );
-                            $("#odsjekSelect").append( "<option value='Turizam i hotelijerstvo'>Turizam i hotelijerstvo</option>" );
-                        } else if (selectedFax === "Ekološki fakultet") {
-                            $("#odsjekSelect").append( "<option value='Ekologija i zaštita životne sredine'>Ekologija i zaštita životne sredine</option>" );
-                            $("#odsjekSelect").append( "<option value='Inžinjerstvo zaštite životne sredine'>Inžinjerstvo zaštite životne sredine</option>" );
-                            $("#odsjekSelect").append( "<option value='Biodiverzitet'>Biodiverzitet</option>" );
-                            $("#odsjekSelect").append( "<option value='Zaštita okoliša u gradovima'>Zaštita okoliša u gradovima</option>" );
-                            $("#odsjekSelect").append( "<option value='Održivi razvoj'>Održivi razvoj</option>" );
-                        } else if (selectedFax === "Saobraćajni fakultet") {
-                            $("#odsjekSelect").append( "<option value='Drumski i gradski saobraćaj'>Drumski i gradski saobraćaj</option>" );
-                            $("#odsjekSelect").append( "<option value='Menadžment u saobraćaju'>Menadžment u saobraćaju</option>" );
-                            $("#odsjekSelect").append( "<option value='Vazdušni saobraćaj'>Vazdušni saobraćaj</option>" );
-                            $("#odsjekSelect").append( "<option value='Sigurnost u drumskom saobraćaju'>Sigurnost u drumskom saobraćaju</option>" );
-                            $("#odsjekSelect").append( "<option value='Saobraćaj'>Saobraćaj</option>" );
-                        } else if (selectedFax === "Pravni fakultet") {
-                            $("#odsjekSelect").append( "<option value='Građanskopravni'>Građanskopravni</option>" );
-                            $("#odsjekSelect").append( "<option value='Historija države i prava'>Historija države i prava</option>" );
-                            $("#odsjekSelect").append( "<option value='Krivičnopravni'>Krivičnopravni</option>" );
-                            $("#odsjekSelect").append( "<option value='Državno i međunarodno javno pravo'>Državno i međunarodno javno pravo</option>" );
-                            $("#odsjekSelect").append( "<option value='Privedno pravni'>Privedno pravni</option>" );
-                            $("#odsjekSelect").append( "<option value='Javna uprava'>Javna uprava</option>" );
-                        } else if (selectedFax === "Fakultet informacionih tehnologija") {
-                            $("#odsjekSelect").empty();
-                            $("#odsjekSelect").append( "<option value='Softversko programiranje'>Softversko programiranje</option>" );
-                            $("#odsjekSelect").append( "<option value='Informacione tehnologije'>Informacione tehnologije</option>"  );
-                            $("#odsjekSelect").append( "<option value='Računarski sistemi i mreže'>Računarski sistemi i mreže</option>" );
-                        } else if (selectedFax === "Fakultet za medije i komunikacije") {
-                            $("#odsjekSelect").append( "<option value='Odnosi s javnošću'>Odnosi s javnošću</option>" );
-                            $("#odsjekSelect").append( "<option value='Mediji'>Mediji</option>" );
-                            $("#odsjekSelect").append( "<option value='Komunikacije'>Komunikacije</option>" );
-                        } else if (selectedFax === "Fakultet politehničkih nauka") {
-                            $("#odsjekSelect").append( "<option value='Mašinstvo'>Mašinstvo</option>" );
-                            $("#odsjekSelect").append( "<option value='Građevinarstvo'>Građevinarstvo</option>" );
-                            $("#odsjekSelect").append( "<option value='Elektrotehnika'>Elektrotehnika</option>" );
-                            $("#odsjekSelect").append( "<option value='Logistika'>Logistika</option>" );
-                            $("#odsjekSelect").append( "<option value='Sigurnost i zaštita na radu'>Sigurnost i zaštita na radu</option>" );
-                            $("#odsjekSelect").append( "<option value='Inžinjerski menađžment'>Inžinjerski menađžment</option>" );
-                            $("#odsjekSelect").append( "<option value='Arhitektura i urbanizam'>Arhitektura i urbanizam</option>" );
-                        }
-
-                    });
-                </script>
                 <script>
 
                     if (window.location.href.indexOf('success=studentadded') > 0) {

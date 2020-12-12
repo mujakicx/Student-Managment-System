@@ -13,8 +13,8 @@ if (isset($_POST['submit'])) {
     $fakultet = $conn->real_escape_string($_POST['fakultet']);
     $studijskiProgram = $conn->real_escape_string($_POST['studijskiProgram']);
     $odsjek = $conn->real_escape_string($_POST['odsjek']);
-    $broj_indeksa = $conn->real_escape_string($_POST['broj_indeksa']);
 
+    $broj_indeksa = $conn->real_escape_string($_POST['broj_indeksa']);
 
     require_once '../../includes/functions.inc.php';
 
