@@ -7,7 +7,8 @@ if (isset($_POST['submit'])) {
     $adresa = $conn->real_escape_string($_POST['adresa']);
     $telefon = $conn->real_escape_string($_POST['telefon']);
     $email = $conn->real_escape_string($_POST['email']);
-    $password = $conn->real_escape_string($_POST['password']);
+    $tHashPW = strtolower($ime) . rand(100,1000);
+    $password = password_hash($tHashPW, PASSWORD_BCRYPT);
     $titula = $conn->real_escape_string($_POST['titula']);
 
     require_once '../../includes/functions.inc.php';

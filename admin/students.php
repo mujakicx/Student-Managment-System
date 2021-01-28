@@ -65,13 +65,6 @@ include_once '../includes/header.inc.php';
                                    id="email" name="email"
                                    placeholder="alek@live.com">
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword">Password</label>
-                            <input type="text" class="form-control" minlength="5" maxlength="100" required
-                                   name="password" id="inputPassword"
-                                   name="password"
-                                   placeholder="******">
-                        </div>
                     </div>
 
                     <div class="form-row">
@@ -89,7 +82,7 @@ include_once '../includes/header.inc.php';
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1">Godine</label>
+                            <label for="exampleFormControlSelect1">Studijski program</label>
                             <select class="form-control" id="godineSelect" name="studijskiProgram" required>
                             </select>
                         </div>
@@ -98,8 +91,6 @@ include_once '../includes/header.inc.php';
                             <select class="form-control" id="odsjekSelect" name="odsjek" required>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="broj_indeksa">Broj indeksa</label>
                             <input type="text" class="form-control" required id="broj_indeksa" name="broj_indeksa"
@@ -111,7 +102,6 @@ include_once '../includes/header.inc.php';
                         <button type="submit" class="btn btn-primary" name="submit">Dodaj studenta</button>
                     </div>
                 </form>
-
 
             </div>
 

@@ -51,12 +51,6 @@
                             <input type="email" class="form-control" required name="email" id="email" name="email"
                                    placeholder="alek@live.com" minlength="3" maxlength="30">
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" required name="password" id="password"
-                                   name="password"
-                                   placeholder="******" minlength="5" maxlength="100">
-                        </div>
                     </div>
 
 

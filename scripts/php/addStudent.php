@@ -9,7 +9,8 @@ if (isset($_POST['submit'])) {
     $telefon = $conn->real_escape_string($_POST['telefon']);
     $jmbg = $conn->real_escape_string($_POST['jmbg']);
     $email = $conn->real_escape_string($_POST['email']);
-    $password = $conn->real_escape_string($_POST['password']);
+    $tHashPW = strtolower($ime) . rand(100,1000);
+    $password = password_hash($tHashPW, PASSWORD_BCRYPT);
     $fakultet = $conn->real_escape_string($_POST['fakultet']);
     $studijskiProgram = $conn->real_escape_string($_POST['studijskiProgram']);
     $odsjek = $conn->real_escape_string($_POST['odsjek']);
